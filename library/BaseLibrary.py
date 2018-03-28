@@ -54,30 +54,16 @@ class DriverInvoker:
                             DRIVER.maximize_window()
                             DRIVER.quit()
             '''
-
-            # Method 1
             fp = FirefoxProfile()
             fp.native_events_enabled = False
-#             fp.accept_untrusted_certs()
             Conf.DRIVER = webdriver.Firefox(firefox_profile=fp)
             
-            # Method 2
-#             DRIVER = webdriver.Firefox()
-#             return DRIVER
-            
         elif self.driverName.upper() == 'CHROME':
-            # os.popen("TASKKILL /F /IM chrome.exe")
             os.popen("TASKKILL /F /IM chromedriver.exe")
-            
-            # Method 1
+
             Conf.DRIVER = webdriver.Chrome(executable_path=Conf.DRIVER_CHROME)
             
-            # Method 2
-#             DRIVER = webdriver.Chrome(executable_path=Conf.DRIVER_CHROME)
-#             return DRIVER
-            
         elif self.driverName.upper() == 'IE':
-            # os.popen("TASKKILL /F /IM iexplore.exe")
             os.popen("TASKKILL /F /IM IEDriverServer.exe")
             
             dc = DesiredCapabilities.INTERNETEXPLORER.copy()
@@ -87,10 +73,6 @@ class DriverInvoker:
             
             os.environ["webdriver.ie.DRIVER"] = Conf.DRIVER_IE
             Conf.DRIVER = webdriver.Ie(executable_path=Conf.DRIVER_IE, capabilities=dc)
-            
-            # Method 2
-#             DRIVER = webdriver.Ie(executable_path=Conf.DRIVER_IE, capabilities=dc)
-#             return DRIVER     
     
         else:
             return None
@@ -105,11 +87,9 @@ class LoginApp:
         DRIVER = Conf.DRIVER
         DRIVER.implicitly_wait(30)
         DRIVER.get(Conf.URL)
-        # DRIVER.maximize_window()
+        DRIVER.maximize_window()
         
         return DRIVER
-
-# DRIVER = LoginApp().sysLogin()
 
 """
     Convert special char to normal string
@@ -246,7 +226,6 @@ def generate_report(report_name="default_report_name"):
                                           description=Conf.REPORT_DESC)
     return runner
 
-
 """Get system date"""
 def current_date():
     return datetime.now().strftime('%Y.%m.%d')
@@ -337,7 +316,6 @@ def get_value_from_conf(key):
                     return str(data.split('=', 1)[1].strip())
     except IOError:
         return ""
-
 
 if __name__ == '__main__':
     pass

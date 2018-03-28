@@ -24,10 +24,9 @@ OrgList		        = "(//button[@type='button'])[3]"
 Jiulong             = "//div[@id='regionApp']/div[3]/div/div/ul/li[16]/a/span"
 
 # 项目及结果路径
-PROJECT_PATH        = u"D:\\yzhealth-automation"
-RESULT_PATH        = u"D:\\yzhealth-automation\\result"
-FILE_PATH			= u"D:\\yzhealth-automation\\data"
-XML_PATH			= "D:\\yzhealth-automation\\data\\info.xml"
+PROJECT_PATH        = u"D:\\testcode\\automation"
+RESULT_PATH         = u"D:\\testcode\\automation\\result"
+XML_PATH			= u"D:\\testcode\\automation\\data\\info.xml"
  
 # # Location of DRIVER(CHROME / FIREFOX / IE)
 DRIVER_CHROME       = u"C:\Python27\chromedriver.exe"
@@ -59,20 +58,20 @@ REPORT_DESC         = "This is desc of report"
 LOG_FILES            = "Auto_Test_Log"
 
 # email config
-MAIL_SENDER         = 'zhoub57@163.com'
-MAIL_RECEIEVER      = '53476969@qq.com'
+MAIL_SENDER         = ''
+MAIL_RECEIEVER      = ''
 MAIL_SUBJECT        = 'Test report fom Automation testing'
 MAIL_SMTPSERVER     = 'smtp.163.com'
-MAIL_USERNAME       = 'zhoub57@163.com'
-MAIL_PASSWORD       = '1984721123abcd'
+MAIL_USERNAME       = ''
+MAIL_PASSWORD       = ''
 
 # Database Operation
 # MySQL
-MYSQL_IP               = u"172.10.16.100"
-MYSQL_USERNAME         = u"root"
-MYSQL_PASSWORD         = u"123456"
-MYSQL_DBNAME             = u"yzhealth"
-MYSQL_CHARSET          = u"utf8"
+# MYSQL_IP               = u"172.10.16.100"
+# MYSQL_USERNAME         = u"root"
+# MYSQL_PASSWORD         = u"123456"
+# MYSQL_DBNAME             = u"yzhealth"
+# MYSQL_CHARSET          = u"utf8"
 
 # Oracle
 # ORACLE_IP               = u"127.0.0.1"
