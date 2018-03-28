@@ -9,11 +9,6 @@ DRIVER = ""
 
 # 测试站点
 URL                 = u"http://172.16.10.100:17021/yzhealth-portal/auth/toLogin.do"
-CourseDesign_URL	= "http://www.baidu.com"
-
-# WEB SITE ACCOUNT
-# USERNAME            = u"EDPRBI"
-# PASSWORD            = u"test"
 
 #下拉列表的Xpath路径
 ProvinceList		= "//button[@type='button']"
