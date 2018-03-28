@@ -5,7 +5,6 @@ import os, sys
 sys.path.append("..")
 from conf import Conf
 from imp import reload
-from conf.Conf import *
 
 reload(sys)
 # sys.setdefaultencoding('gbk')

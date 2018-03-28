@@ -4,23 +4,12 @@ from unittest import TestCase
 from selenium.common.exceptions import NoSuchElementException, NoAlertPresentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
-from datetime import datetime, date
+from datetime import date
 import os,sys
 sys.path.append("..")
-from conf import Conf
 from library import Log
 from conf.Conf import *
 from library.Log import *
-
-# class TestCaseBasicObject(TestCase):
-#     @classmethod
-#     def setUpClass(self):
-#         self.driver = LoginApp().sysLogin()
-#         Conf.DRIVER = self.driver
-
-#     @classmethod
-#     def tearDownClass(self):
-#         self.driver.quit()
 
 class Element(WebElement):
     """Using this class "Element" to fetch element from page, and if do not find_element element, 
@@ -117,19 +106,6 @@ class Element(WebElement):
         else:
             print ("Drop-down list: %s is not a list" % (element_name))
             Log.step_fail("Drop-down list: %s is not a list" % (element_name))
-            
-    #     if isinstance(element_name, list):
-    #         for item in range(len(element_value)):
-    #             if option_value == element_value[item]:
-    #                 for i in range(len(element_name)):
-    #                     if element_name[i].text == element_value[item]:
-    #                         element_name[i].click()
-    #                         print "Element %s is chosen" %(element_name[i].text)
-    #                         break
-    #                     else:
-    #                         print "Error : Element [ %s ] not found" %(option_value)
-    #     else:
-    #         print "Error : %s is not a list" %(element_name)
 
     @classmethod
     def date_picker(self, month, day):

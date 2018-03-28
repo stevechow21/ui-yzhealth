@@ -1,13 +1,8 @@
 #-*- coding: UTF-8 -*-
-from unittest import TestCase
-import os,sys
+import sys
 sys.path.append("..")
 import time
 from selenium.webdriver.common.by import By
-from conf import Conf
-from conf.Conf import *
-from library import Log
-from library.Log import *
 from library.BaseLibrary import *
 from library.BasicPageObject import Element, Assert, Browser
 from library.LoginPageObject import LoginPageObject
