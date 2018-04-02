@@ -13,7 +13,7 @@ import smtplib
 import unittest
 import urllib
 import zipfile
-import os, sys
+import sys
 
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
