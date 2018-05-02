@@ -4,4 +4,6 @@
 	<url>http://172.16.10.100:17021/yzhealth-portal/auth/toLogin.do</url>
 	<login username="admin" passwd='1'> </login>
 	<login username="jl" passwd='1'> </login>
+	<archive idcard="320511198406143822" name="Auto张三" org="org-tree_1_span" phone="18899977777" address="Auto address" register="Auto register"> </archive>
+
 </info>
