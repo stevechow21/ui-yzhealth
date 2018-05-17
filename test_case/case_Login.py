@@ -22,6 +22,7 @@ class TestCaseLogin(TestCaseBasicObject):
         userinfo = userList[0]
         username = userinfo.getAttribute("username")
         password = userinfo.getAttribute("passwd")   # 从xml文件读取用户登录信息
+        print username
 
         LoginPageObject.test_login_common(username, password)
 
