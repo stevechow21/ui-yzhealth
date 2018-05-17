@@ -16,14 +16,19 @@ userList = root.getElementsByTagName('login')
 archiveList = root.getElementsByTagName('archive')
 
 class TestCaseAddArchive(TestCaseBasicObject):
+
+    userinfo = userList[1]
+    username = userinfo.getAttribute("username")
+    password = userinfo.getAttribute("passwd")  # 从xml文件读取用户登录信息
+
     def test_case_archive_add_001(self):
         '''创建档案（必填项）'''
         Conf.CASE_NAME = "test_case_archive_add_001"
         Log.start_test(Conf.CASE_NAME)
 
-        userinfo = userList[1]
-        username = userinfo.getAttribute("username")
-        password = userinfo.getAttribute("passwd")  # 从xml文件读取用户登录信息
+        # userinfo = userList[1]
+        # username = userinfo.getAttribute("username")
+        # password = userinfo.getAttribute("passwd")  # 从xml文件读取用户登录信息
         archiveinfo = archiveList[0]
         idcard = archiveinfo.getAttribute("idcard")  # 从xml文件读取添加档案信息
         name = archiveinfo.getAttribute("name")
@@ -32,7 +37,7 @@ class TestCaseAddArchive(TestCaseBasicObject):
         address = archiveinfo.getAttribute("address")
         register = archiveinfo.getAttribute("register")
 
-        LoginPageObject.test_login_common(username, password, is_org='Y')
+        LoginPageObject.test_login_common(self.username, self.password, is_org='Y')
         AddArchivePageObject.test_add_archive_required(idcard, name, org, phone, address, register)
 
         reload(sys)
